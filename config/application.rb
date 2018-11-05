@@ -1,10 +1,12 @@
 require_relative 'boot'
 
 require 'rails/all'
+# require 'openssl'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
 
 module Myrottenpotatoes
   class Application < Rails::Application
@@ -16,4 +18,7 @@ module Myrottenpotatoes
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+  # if Rails.env.development?
+  #   OpenSSL:SSL:VERIFY_PEER = OpenSSL::SSL:VERIFY_NONE
+  # end
 end
