@@ -1,4 +1,5 @@
 Myrottenpotatoes::Application.routes.draw do
+  resources :articles
   resources :movies
   post '/movies/search_tmdb'
   root :to => redirect('/movies')
