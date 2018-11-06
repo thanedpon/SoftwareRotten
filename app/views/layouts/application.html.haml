@@ -1,9 +1,27 @@
+%nav
+  .nav-wrapper
+    %a.brand-logo{:href => "#"} RottenPotatoes
+    %ul#nav-mobile.right.hide-on-med-and-down
+      %li
+        %a{:href => 'movies'} Home
+      %li
+        - if @current_user
+          %a.welcome  Welcome, #{@current_user.name}!
+      %li
+        %a{:href => "/logout"} Logout
+            
+        
+
+        
+
 !!! 5
 %html
   %head
     %title RottenPotatoes! 
     = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
     = javascript_include_tag 'application'
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js' 
     = csrf_meta_tags
     
   %body
@@ -14,4 +32,6 @@
       #warning.message= flash[:warning]
     = render :partial => 'log_in'
     #main
+  
       = yield
+      

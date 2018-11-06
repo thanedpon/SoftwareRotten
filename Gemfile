@@ -42,6 +42,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'openssl'
 gem 'rspec-rails'
+gem 'materialize-sass', '~> 1.0.0'
 
 
 group :development, :test do
