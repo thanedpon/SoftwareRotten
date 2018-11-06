@@ -9,8 +9,11 @@
         = @movie.release_date.strftime("%B %d, %Y")
         
 %h3 Description:
-
-
+%p
+    = @movie.description
+%br
+%br
+%br
 
 = button_to('Back to movie list', movies_path, :method => :get, class: "waves-effect waves-light btn")
 = button_to('Edit info', edit_movie_path(@movie), :method => :get, class: "waves-effect waves-light btn") 

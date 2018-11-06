@@ -3,13 +3,15 @@
 %table#movies
     %thead
         %tr
+            %th Number
             %th Movie Title
             %th Rating
             %th Release Date
             %th More Info
     %tbody
-        -@movies.each do |movie|
+        -@movies.sort_by {|m| m.title.downcase}.each_with_index do |movie, number| number = number + 1
             %tr
+                %td= number
                 %td= movie.title
                 %td= movie.rating
                 %td= movie.release_date

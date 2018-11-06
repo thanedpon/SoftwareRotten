@@ -2,6 +2,8 @@
 
 = form_tag movie_path(@movie), :method => :put do
   = render :partial => 'movie_form'
+  %br
   = submit_tag 'Save changes'
   %br
-  = link_to 'Cancel', movie_path(@movie)
+  %br
+  %a{class: "waves-effect waves-light btn", href:"/movies/#{@movie.id}"} Cancel

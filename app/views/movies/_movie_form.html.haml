@@ -18,3 +18,9 @@
 = label :movie, :release_date, 'Released On'
 %br
 = date_select :movie, :release_date,  {}, class:"browser-default"
+
+%br
+= label :movie, :description, 'Description'
+%br
+= text_area :movie, :description, rows:4, cols:50
+%br
