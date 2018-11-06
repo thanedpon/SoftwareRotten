@@ -15,4 +15,6 @@
                 %td= movie.release_date
                 %td= link_to "More about #{movie.title}", movie_path(movie)
   
-= link_to 'Add new movie', new_movie_path
+  
+        %a{class: "btn-floating btn-large waves-effect waves-light red", href: "/movies/new"}
+            %i{class: "material-icons"} +
