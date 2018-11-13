@@ -17,7 +17,7 @@
 
 = label :movie, :release_date, 'Released On'
 %br
-= date_select :movie, :release_date,  {}, class:"browser-default"
+= date_select :movie, :release_date, {start_year: 1930}, class:"browser-default"
 
 %br
 = label :movie, :description, 'Description'

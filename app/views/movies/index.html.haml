@@ -10,7 +10,7 @@
             %th More Info
     %tbody
         -@movies.sort_by {|m| m.title.downcase}.each_with_index do |movie, number| number = number + 1
-            %tr
+            %tr{:class => ('adult' unless movie.rating =~ /^G|PG$/)}
                 %td= number
                 %td= movie.title
                 %td= movie.rating
@@ -20,3 +20,11 @@
   
         %a{class: "btn-floating btn-large waves-effect waves-light red", href: "/movies/new"}
             %i{class: "material-icons"} +
+
+%h1 Search TMDb for a movie
+
+= form_tag :action => 'search_tmdb' do
+
+    %label{:for => 'search_terms'} Search Terms
+    = text_field_tag 'search_terms'
+    = submit_tag 'Search TMDb'

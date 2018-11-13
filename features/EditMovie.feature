@@ -5,7 +5,7 @@ Scenario: Edit Movie
   Given I am on the RottenPotatoes home page
   And I should see "Conjuring"
   When I follow "More about Conjuring"
-  When I follow "Edit info"
+  When I press "Edit info"
   When I should be on the Edit Movie page
   And I fill in "Title" with "Conjuring2nd"
   And I select "PG" from "Rating"

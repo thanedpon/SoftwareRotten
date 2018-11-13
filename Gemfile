@@ -7,6 +7,7 @@ ruby '2.4.1'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+#gem 'pg'
 #gem 'pg', '~> 1.1.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -43,6 +44,7 @@ gem 'omniauth-facebook'
 gem 'openssl'
 gem 'rspec-rails'
 gem 'materialize-sass', '~> 1.0.0'
+gem 'themoviedb'
 
 
 group :development, :test do
