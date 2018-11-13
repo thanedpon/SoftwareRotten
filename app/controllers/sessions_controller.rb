@@ -9,10 +9,10 @@ class SessionsController < ApplicationController
         #redirect_to '/'
         redirect_to movies_path
     end
-    protected
-    def auth_hash
-        request.env['omniauth.auth']
-    end
+    # protected
+    # def auth_hash
+    #     request.env['omniauth.auth']
+    # end
     
     def destroy
         session.delete(:user_id)

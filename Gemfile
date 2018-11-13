@@ -45,6 +45,7 @@ gem 'openssl'
 gem 'rspec-rails'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'themoviedb'
+gem 'jquery-rails'
 
 
 group :development, :test do

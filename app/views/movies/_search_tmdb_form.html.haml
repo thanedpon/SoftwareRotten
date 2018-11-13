@@ -4,4 +4,5 @@
   %div{class: "uk-width-1-4@l uk-width-1-2@m"}
     = text_field '', 'search_terms', class: "uk-input", required: true
   %div{class: "uk-width-1-4@l uk-width-1-2@m"}
-    = submit_tag 'Search TMDb', :class => "uk-button uk-button-primary"
+    = submit_tag 'Search TMDb', :class => "waves-effect waves-light btn"
+    = button_to 'Back', movies_path, :method => :get, class: "waves-effect waves-light btn"
