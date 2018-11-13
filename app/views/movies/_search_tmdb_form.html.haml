@@ -1,8 +1,6 @@
 %h3 Search TMDb for a movie
-= form_tag({action: 'search_tmdb'}, method: :post, class: "uk-grid-small", "uk-grid": '') do
-  %label{:for => 'search_terms', class: "uk-form-label"} Search Terms
-  %div{class: "uk-width-1-4@l uk-width-1-2@m"}
-    = text_field '', 'search_terms', class: "uk-input", required: true
-  %div{class: "uk-width-1-4@l uk-width-1-2@m"}
-    = submit_tag 'Search TMDb', :class => "waves-effect waves-light btn"
-    = button_to 'Back', movies_path, :method => :get, class: "waves-effect waves-light btn"
+= form_tag :action => 'search_tmdb' do
+  %label{:for => 'search_terms'} Search Terms
+  = text_field_tag 'search_terms'
+  = submit_tag 'Search TMDb'
+  = button_to 'Cancle', movies_path

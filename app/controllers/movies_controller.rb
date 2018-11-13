@@ -59,11 +59,18 @@ class MoviesController < ApplicationController
     end
     
     def search_tmdb
-        # hardwire to simulate failure
-        #flash[:warning] = "'#{params[:search_terms]}' was not found in TMDb."
-        @current_user ||= Moviegoer.find_by(id: session[:user_id])
-        @movies = Movie.find_in_tmdb(params[:search_terms])
-        #redirect_to movies_path
+        
+        if params['search_terms'] == "" or params['search_terms'] == 0
+            flash[:notice] = "Please enter some character"
+            return redirect_to movies_path
+        elsif @current_user['total_results'] == 0
+            flash[:warning] = "'#{params[:search_terms]}' was not found in TMDb."
+            return redirect_to movies_path
+        else
+            @current_user ||= Moviegoer.find_by(id: session[:user_id])
+            @movies = Movie.find_in_tmdb(params[:search_terms])
+            #redirect_to movies_path
+        end
     end
     
     def allowparams

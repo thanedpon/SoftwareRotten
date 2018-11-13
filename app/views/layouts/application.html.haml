@@ -3,17 +3,8 @@
     %a.brand-logo{:href => "#"} RottenPotatoes
     %ul#nav-mobile.right.hide-on-med-and-down
       %li
-        %a{:href => 'movies'} Home
-      %li
         - if @current_user
           %a.welcome  Welcome, #{@current_user.name}!
-      %li
-        %a{:href => "/logout"} Logout
-            
-        
-
-        
-
 !!! 5
 %html
   %head
@@ -30,8 +21,9 @@
       #notice.message= flash[:notice]
     - elsif flash[:warning]
       #warning.message= flash[:warning]
-   
-    
+
     %div{class: "container"}
       = yield
+      
+    
       
