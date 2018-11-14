@@ -4,3 +4,7 @@
   border: 2px double grey;
   background: wheat;
 } 
+
+.input-field label {
+pointer-events: auto;
+}

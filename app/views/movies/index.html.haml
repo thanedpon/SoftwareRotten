@@ -15,7 +15,7 @@
             %th More Info
     %tbody
         -@movies.sort_by {|m| m.title.downcase}.each_with_index do |movie, number| number = number + 1
-            %tr{:class => ('adult' unless movie.rating =~ /^G|PG$/)}
+            %tr{:class => movie.rating}
                 %td= number
                 %td= movie.title
                 %td= movie.rating
