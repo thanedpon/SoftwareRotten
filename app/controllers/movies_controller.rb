@@ -60,7 +60,7 @@ class MoviesController < ApplicationController
     
     def search_tmdb
         
-        if params['search_terms'] == "" or params['search_terms'] == 0
+        if params['search_terms'] == ""
             flash[:notice] = "Please enter some character"
             return redirect_to movies_path
         elsif @current_user['total_results'] == 0

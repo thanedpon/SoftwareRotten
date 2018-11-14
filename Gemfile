@@ -46,7 +46,7 @@ gem 'rspec-rails'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'themoviedb'
 gem 'jquery-rails'
-gem 'themoviedb-api'
+
 
 
 group :development, :test do

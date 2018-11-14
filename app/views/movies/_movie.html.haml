@@ -1,5 +1,16 @@
+%h2 Details about #{@movie.title}
+
+%ul 
+    %li
+        Rating:
+        = @movie.rating
+    %li
+        Released on:
+        = @movie.release_date.strftime("%B %d, %Y")
+
 %h3 Description:
 %p= movie.description
 
 = link_to 'Edit Movie', edit_movie_path(movie), class:"waves-effect waves-light btn"
-= link_to 'Close',{}, {:id => 'closeLink'}
+= link_to('Delete', movie_path(@movie), :method => :delete, class: "waves-effect waves-light btn")
+= link_to 'Close',{}, {:id => 'closeLink', class: "waves-effect waves-light btn"}
